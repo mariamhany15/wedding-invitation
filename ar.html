@@ -156,6 +156,11 @@ h1,h2{line-height:1.4;font-weight:700}
 @media (min-width:720px){.sprig-hero{right:auto;left:24px}}
 </style>
 <style>
+.maplink{display:inline-flex;align-items:center;margin-top:12px;font:600 15px/1.3 var(--body);color:var(--accent);text-decoration:none;border-bottom:1.5px solid var(--accent-soft);padding-bottom:2px}
+.maplink:hover{color:var(--ink)}
+.maplink:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+</style>
+<style>
 /* Envelope intro: cream envelope, plum wax seal. Tap the seal, the flap opens, the card rises, the page appears. */
 .intro{display:none}
 html.js .intro{display:flex}
@@ -312,7 +317,7 @@ html[dir=rtl] .seal span{font-style:normal;font-weight:700;letter-spacing:0}
         </div>
         <div class="row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3h8l-.6 6a3.4 3.4 0 0 1-6.8 0L8 3z"/><path d="M12 12.4V20M8.5 20h7"/></svg>
-          <div><p class="k">الحفل</p><p class="v">لوسيل (Le Ciel)</p><p class="s">بعد الكنيسة</p></div>
+          <div><p class="k">الحفل</p><p class="v">لوسيل (Le Ciel)</p><p class="s">بعد الكنيسة</p><a class="maplink" href="https://maps.app.goo.gl/MndLhKUFSYgPubWU7?g_st=iw" target="_blank" rel="noopener">خريطة الوصول إلى Le Ciel</a></div>
         </div>
         <div class="row">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 16.5v-4l1.8-4.6A2 2 0 0 1 7.2 6.5h9.6a2 2 0 0 1 1.9 1.4l1.8 4.6v4"/><path d="M3.5 12.5h17"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/></svg>
@@ -326,7 +331,7 @@ html[dir=rtl] .seal span{font-style:normal;font-weight:700;letter-spacing:0}
       <div class="actions">
         <a class="btn btn-dark" href="https://maps.app.goo.gl/pYJVjhzZGvYx5jRPA?g_st=ic" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11z"/><circle cx="12" cy="10" r="2.4"/></svg>
-          خريطة الوصول</a>
+          خريطة الوصول للكنيسة</a>
         <a class="btn btn-line" id="cal" href="#" target="_blank" rel="noopener">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4M12 13v5M9.5 15.5h5"/></svg>
           أضيفوا الموعد للتقويم</a>
@@ -371,7 +376,7 @@ document.getElementById('cal').href =
   'https://calendar.google.com/calendar/render?action=TEMPLATE'
   + '&text=' + encodeURIComponent(TITLE)
   + '&dates=20261122T180000/20261122T220000&ctz=Africa/Cairo&hl=ar'
-  + '&details=' + encodeURIComponent('نتشرف بحضوركم. الحفل في لوسيل (Le Ciel) بعد الكنيسة. التحرك الساعة ٥:٠٠ مساءً. خريطة الوصول: ' + MAPS)
+  + '&details=' + encodeURIComponent('نتشرف بحضوركم. الحفل في لوسيل (Le Ciel) بعد الكنيسة. التحرك الساعة ٥:٠٠ مساءً. خريطة الكنيسة: ' + MAPS + ' خريطة Le Ciel: https://maps.app.goo.gl/MndLhKUFSYgPubWU7?g_st=iw')
   + '&location=' + encodeURIComponent('كنيسة الأمير تادرس، المنيا');
 
 document.getElementById('share').href =
